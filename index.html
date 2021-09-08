@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    STOCK MANAGEMENT
+  </title>
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td>
+        <form onsubmit="event.preventDefault();AddStock();" autocomplete="off">
+          <div>
+            <h1>Add Stock</h1>
+          </div>
+          <div>
+            <label>Select a Product Code</label>
+              <select id="drpAS">
+                <option value="--Select--" selected>--Select--</option>
+                <option value="PRODUCT01">PRODUCT01</option>
+                <option value="PRODUCT02">PRODUCT02</option>
+                <option value="PRODUCT03">PRODUCT03</option>
+              </select>
+          </div>
+          <div>
+            <label>Items Received</label>
+            <input type="text" name="ItemsReceived" id="ItemsReceived" placeholder="2">
+          </div>
+          <div>
+            <label>Price Per Item Received</label>
+            <input type="text" name="PricePerItem" id="PricePerItem" placeholder="350.00">
+          </div>
+          <div class="form-action-buttons">
+            <input type="submit" value="Add Stock">
+          </div>
+        </form>
+      </td>
+      <td>
+        <form onsubmit="event.preventDefault();RemoveStock();" autocomplete="off">
+          <div>
+            <h1>Remove Stock</h1>
+          </div>
+          <div>
+            <label>Select a Product Code</label>
+              <select id="drpRS">
+                <option value="--Select--" selected>--Select--</option>
+                <option value="PRODUCT01">PRODUCT01</option>
+                <option value="PRODUCT02">PRODUCT02</option>
+                <option value="PRODUCT03">PRODUCT03</option>
+              </select>
+          </div>
+          <div>
+            <label>Buyer Email Address</label>
+            <input type="text" name="BuyerEmail" id="BuyerEmail" placeholder="example@gmail.com">
+          </div>
+          <div>
+            <label>Items Bought</label>
+            <input type="text" name="ItemsBought" id="ItemsBought" placeholder="5">
+          </div>
+          <div class="form-action-buttons">
+            <input type="submit" value="Item Shipped">
+          </div>
+        </form>
+      </td>
+      <td>
+        <div>
+          <h1>Stock Levels</h1>
+        </div>
+        <table class="list" id="StockLevels">
+          <tr>
+            <td>
+              <h4>PRODUCT01</h4>
+              <p id="priceProduct1">0.00</p>
+            </td>
+            <td class="tdright">
+              <p id="totalProduct1">0</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4>PRODUCT02</h4>
+              <p id="priceProduct2">0.00</p>
+            </td>
+            <td class="tdright">
+              <p id="totalProduct2">0</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4>PRODUCT03</h4>
+              <p id="priceProduct3">0.00</p>
+            </td>
+            <td class="tdright">
+              <p id="totalProduct3">0</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <script src="myscript.js"></script>
+</body>
+
+</html>
